@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Godwin Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-align: center;
+      color: rgb(11, 231, 99);
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 15px;
+      background-color: #222;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .section-title:hover {
+      background-color: #333;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: flex;
+      width: 200vw;
+      height: 100vh;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    #portfolio:target ~ .container {
+      transform: translateX(-100vw);
+    }
+    .page1 {
+  background: url('kiplimo.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+    .profile-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 2;
+      border: 4px solid #fff;
+    }
+
+    .ring {
+      width: 150px;
+      height: 150px;
+      border: 4px solid transparent;
+      border-top: 4px solid #FFD700;
+      border-radius: 50%;
+      animation: rotate 2s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .welcome-note {
+      font-size: 1.5em;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+    .enter-btn {
+      margin-top: 30px;
+      padding: 10px 30px;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      font-size: 1em;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .page2 {
+      background: #003366;
+      color: white;
+      height: 100vh;
+      width: 100vw;
+      overflow-y: auto;
+      padding: 40px 20px;
+      position: relative;
+    }
+ .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    details {
+      margin-bottom: 20px;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+      margin-right: 10px;
+    }
+    summary::after {
+      content: "▼";
+      float: right;
+      margin-right: 10px;
+    }
+    summary {
+      list-style: none;
+    }
+
+    details > div, details > p {
+      padding: 10px 15px;
+    }
+    .cv-button {
+      background-color: #0ae783;
+      color: #111;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .cv-button:hover {
+      background-color: #08c973;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<a id="portfolio"></a>
+
+<div class="container">
+  <div class="page1">
+    <div class="profile-container">
+      <div class="ring"></div>
+      <img src="Godwin kiplimo.jpg" alt="Profile Picture" class="profile-pic" />
+    </div>
+    <h1>GODWIN KIPLIMO TERKECH</h1>
+    <p class="welcome-note">
+      HELLO WELCOME TO MY PORTFOLIO, I'M GODWIN KIPLIMO TERKECH, A PASSIONATE WEB DEVELOPER, PROGRAMMER, AND ICT TRAINER.FEEL FREE TO EXPLORE MY SKILLS, VIEW MY PROJECTS, AND CONNECT WITH ME. THANK YOU
+    </p>
+    <a href="#portfolio" class="enter-btn">ENTER ➔</a>
+  </div>
+  <div class="page2">
+    <a href="#" class="enter-btn" style="position: absolute; top: 20px; left: 20px; background-color: #333;">⬅ Back</a>
+    <details open>
+  <summary class="section-title">ABOUT ME</summary>
+  <div>
+    <p>
+      My name is <strong>Godwin Kiplimo Terkech</strong>. I am a dedicated Web Developer, experienced Programmer, and ICT Trainer with a strong passion for creating efficient, user-focused digital solutions. I specialize in building responsive websites and applications that combine clean design with functional performance.
+    </p>
+    <p>
+      With a background in both development and ICT training, I bring a unique blend of technical expertise and teaching experience. I take pride in writing clean, maintainable code and continuously strive to stay updated with the latest industry standards and technologies.
+    </p>
+    <p>
+      I am committed to excellence, continuous learning, and meaningful collaboration. Feel free to explore my work, connect with me, and discover how we can create impactful solutions together.
+    </p>
+    <h4 style="margin-top: 20px; color: #0ae783;">EDUCATION BACKGROUND</h4>
+    <ul>
+      <li><strong>2020–2024:</strong> <em>Masinde Muliro University of Science and Technology</em><br/>
+        Bachelor of Technology Education (Computer Studies).<br/>
+        Graduated with Second Class Honors (Lower Division).
+      </li>
+      <br/>
+      <li><strong>2023–Present:</strong> <em>Online Short Courses</em><br/>
+        Studied under structured programs with:
+        <ul>
+          <li><strong>CISCO Skills for All:</strong>
+            <ul>
+              <li>Computer Hardware Basics & Maintenance</li>
+              <li>Introduction to Internet of Things</li>
+              <li>JavaScript Programming Language</li>
+            </ul>
+          </li>
+          <li><strong>IT Masters & Charles Sturt University:</strong>
+            <ul>
+              <li>Cyber Defence Strategies</li>
+              <li>Effective Workplace Communication (Digital Era)</li>
+              <li>Applied Digital Marketing Strategy</li>
+              <li>Comparative Cloud Technologies</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <br/>
+      <li><strong>2016–2019:</strong> <em>Meteitei Boys' Secondary School</em><br/>
+        Achieved a mean grade of <strong>B– (53 points)</strong> in KCSE, 2019.<br/>
+        Served as Secretary of the <strong>Great Debators Club</strong>.<br/>
+        Active member of the <strong>Meteitei SDA Young Singers' Society</strong> as an Usher and Deacon.
+      </li>
+      <br/>
+      <li><strong>2007–2015:</strong> <em>Meteitei Primary School, Nandi</em><br/>
+        Scored <strong>329 marks</strong> in KCPE.<br/>
+        Active member of the School Debate Club.
+      </li>
+    </ul>
+    <a href="Godwin_kiplimo_CV.pdf" download class="cv-button">⬇ Download My CV</a>
+  </div>
+</details>
+    <details>
+      <summary class="section-title">SKILLS</summary>
+      <div class="skills">
+        <div class="card">JAVA</div>
+        <div class="card">CSS</div>
+        <div class="card">C/C++</div>
+        <div class="card">Python</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Networking</div>
+        <div class="card">Database Management</div>
+        <div class="card">ICT Trainer</div>
+      </div>
+    </details>
+    <DETails>
+    <summary class="section-title">PROJECTS</summary>
+    <div class="projects">
+      <div class="card">
+        <h3>PROJECT 1 – Portfolio Website</h3>
+        <p>
+          I designed and developed a personal portfolio website to professionally showcase my technical skills, projects, and background as a Web Developer, Programmer, and ICT Trainer. The goal of this project is to create a digital platform that serves as both a personal brand and a point of engagement for clients, employers, and collaborators.
+        </p>
+        <ul>
+          <li><strong>Full-screen animated landing page</strong> with a rotating ring profile picture and welcoming intro.</li>
+          <li><strong>CSS-only horizontal navigation</strong> using anchor tags and transitions for smooth movement.</li>
+          <li><strong>Expandable sections</strong> for "About Me", "Skills", "Projects", and "Contact Me".</li>
+          <li><strong>Responsive layout</strong> using CSS Flexbox and Grid.</li>
+          <li><strong>Downloadable CV</strong> from the About section.</li>
+          <li><strong>Clean UI</strong> with readable fonts and structured layout.</li>
+        </ul>
+        <p><strong>Technologies:</strong> HTML5, CSS3, Flexbox, Grid (no JavaScript used).</p>
+      </div>
+      <div class="card">
+        <h3>PROJECT 2 – Library Management System (Java + MySQL)</h3>
+        <p>
+          A Java desktop application integrated with MySQL to manage library operations such as book inventory, member registration, book lending, and reporting.
+        </p>
+        <ul>
+          <li>Book cataloging, issue/return, overdue fine tracking.</li>
+          <li>Member registration with ID management.</li>
+          <li>Search and reporting features.</li>
+          <li>Admin interface via Java Swing UI.</li>
+        </ul>
+        <p><strong>Technologies:</strong> Java (Swing), JDBC, MySQL</p>
+      </div>
+      <div class="card">
+        <h3>PROJECT 3 – Quiz Management System (Java + MySQL)</h3>
+        <p>
+          A standalone Java application that allows instructors to create and manage quizzes. Students can log in, attempt timed quizzes, and receive instant feedback.
+        </p>
+        <ul>
+          <li>Admin panel for managing quizzes and questions.</li>
+          <li>User login and secure authentication.</li>
+          <li>Automated scoring with results tracking.</li>
+          <li>Performance history storage in MySQL.</li>
+        </ul>
+        <p><strong>Technologies:</strong> Java, JDBC, MySQL</p>
+      </div>
+    </div>
+  </details>
+<details>
+      <summary class="section-title">CONTACT ME</summary>
+      <div>
+      <p>Email: <a href="mailto:godwinkipli254@gmail.com" style="color: #0ae783;">godwinkipli254@gmail.com</a></p>
+       <p>Phone: <a href="tel:+254727477423" style="color: #0ae783;">+254727477423</a> / <a href="tel:+254710374414" style="color: #0ae783;">+254710374414</a></p>
+        <p>GitHub: <a href="https://github.com/Goddie12" target="_blank" style="color: #0ae783;">github.com/Goddie12</a></p>
+      </div>
+    </details>
+    <footer>
+      <p>&copy; 2025 Godwin Kiplimo. All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
